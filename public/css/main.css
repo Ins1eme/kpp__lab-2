@@ -1,0 +1,185 @@
+body{
+	font-size: 18px;
+	font-family: "Arial", sans-serif;
+}
+.container{
+	max-width: 600px;
+	margin: 20px auto;
+	width: 100%;
+	text-align: center;
+	position: relative;
+}
+.title{
+	font-size: 30px;
+	font-weight: bold;
+	display: block;
+	margin-bottom: 20px;
+}
+.app_info{
+	display: flex;
+	justify-content: space-around;
+}
+.app__list{
+	list-style-type: arabic-indic;
+	text-align: left;
+	padding: 0;
+}
+.app__list-item{
+	display: flex;
+	justify-content: space-between;
+	margin-bottom: 20px;
+	-ms-align-items: center;
+	align-items: center;
+	border-bottom: 1px solid gray;
+	transition: .2s ease-in-out;
+	max-width: 500;
+}
+.app__list-text{
+	width: 100%;
+	max-width: 520px;
+	word-break: break-all;
+	padding: 10px 0px 10px 10px;
+}
+.app__list-item.complete{
+	background-color: green;
+}
+.app__list-item.complete:hover{
+	background-color: green;
+}
+.app__list-item.complete .app__list-text{
+	text-decoration: line-through;
+}
+.app__list-item:last-child{
+	margin-bottom: 0;
+}
+.app__list-item:hover{
+	background-color: #ccc;
+}
+.app__list-remove{
+	width: 20px;
+	height: 20px;
+	border: 1px solid red;
+	border-radius: 50%;
+	text-align: center;
+	margin-right: 5px;
+	background-color: white;
+	transform: rotate(45deg);
+	cursor: pointer;
+}
+.app__list-remove::after,
+.app__list-remove::before{
+	content: "";
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	background-color: red;
+}
+.app__list-remove::before{
+	width: 2px;
+	height: 15px;
+}
+.app__list-remove::after{
+	width: 15px;
+	height: 2px;
+}
+.add__task-new{
+	max-width: 300px;
+	width: 100%;
+	padding: 5px;
+	font-size: 20px;
+	margin-bottom: 20px;
+	border-radius: 2px	;
+	border: 1px solid;
+	outline: none;
+}
+.app__fotter{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+.add__task-btn{
+	position: relative;
+	border-style: none;
+	text-transform: uppercase;
+	cursor: pointer;
+	display: inline-block;
+	font-size: 90%;
+	font-weight: 700;
+	color: rgb(209,209,217);
+	text-decoration: none;
+	text-shadow: 0 -1px 2px rgba(0,0,0,.2);
+	padding: .5em 1em;
+	outline: none;
+	border-radius: 3px;
+	background: linear-gradient(rgb(110,112,120), rgb(81,81,86)) rgb(110,112,120);
+	box-shadow:
+	0 1px rgba(255,255,255,.2) inset,
+	0 3px 5px rgba(0,1,6,.5),
+	0 0 1px 1px rgba(0,1,6,.2);
+	transition: .2s ease-in-out;
+}
+.add__task-btn:hover{
+	 background: linear-gradient(rgb(126,126,134), rgb(70,71,76)) rgb(126,126,134);
+}
+.add__task-btn:active{
+	top: 1px;
+	background: linear-gradient(rgb(76,77,82), rgb(56,57,62)) rgb(76,77,82);
+	box-shadow:
+	0 0 1px rgba(0,0,0,.5) inset,
+	0 2px 3px rgba(0,0,0,.5) inset,
+	0 1px 1px rgba(255,255,255,.1);
+}
+.form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.edit-icon{
+	display: block;
+	cursor: pointer;
+	width: 22px;
+	height: 22px;
+	margin-right: 5px;
+	margin-left: auto;
+	cursor: pointer;
+	background: url("../img/edit.svg") no-repeat;
+}
+.edit{
+	display: flex;
+	flex-direction: column;
+	max-width: 300px;
+	width: 100%;
+	position: absolute;
+	top: 50%; left: 50%;
+	transform: translate(-50%,-50%);
+	padding: 50px;
+	background: #eee;
+	border: 1px solid black;
+}
+.edit-text{
+	margin-bottom: 20px;
+	color: black;
+	font-size: 40px;
+}
+.edit__input{
+	margin-bottom: 20px;
+	padding: 2px;
+	font-size: 20px;
+}
+.edit-btn{
+	display: inline-block;
+	cursor: pointer;
+	margin: auto;
+	color: white;
+	font-weight: 700;
+	text-decoration: none;
+	user-select: none;
+	background: #454545;
+	padding: 10px 20px;
+	text-transform: uppercase;
+	outline: none;
+	border: 2px solid;
+	border-radius: 1px;
+	transition: 0.2s;
+}
