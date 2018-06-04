@@ -2,19 +2,14 @@ const express = require('express');
 const path = require('path');
 const bodyParser = require('body-parser');
 
-
-// Init app
 const app = express();
 
-// Load View Engine
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'pug');
 
-//Body Parser
 app.use(bodyParser.urlencoded({extended: false}))
 app.use(bodyParser.json())
 
-//Set Public Folder
 app.use(express.static(path.join(__dirname, 'public')));
 
 let tasksArray = [
@@ -44,7 +39,6 @@ let сompleteCounts = () => {
 	}
 	return count;
 }
-// Home Route
 
 app.get('/', function(req, res){
 	res.render('index', {
